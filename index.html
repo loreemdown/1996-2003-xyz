@@ -123,7 +123,7 @@
                         </div>
                     
                     
-                       <button class="w-100 btn btn-red btn-lg d-flex align-items-center justify-content-center" id="download-thumb" ><span class="me-3" >Download Thumbnail</span><span data-feather="download-cloud" width="28" height="28"></span></button>
+                       <a class="w-100  btn-red btn-lg d-flex align-items-center justify-content-center" id="download-thumb" ><span class="me-3" >Download Thumbnail</span><span data-feather="download-cloud" width="28" height="28"></span></a>
                     </div>
                     
                     <p>How to copy YouTube video url? <a href="#setup" class="text-danger" >Click here</a></p>
@@ -407,6 +407,7 @@
          var imgPath = imgUrl + imgId + imgQuality;
          var downloadThumb = "url(" + '"' + imgPath + '"' + ")";
          imgPreview.style.backgroundImage = downloadThumb;
+         imgDownload.setAttribute("href", imgPath);
          prevDown.classList.remove("d-none");
       }else if(splitURL[2] == "youtu.be"){
          var imgUrl = "https://img.youtube.com/vi/";
@@ -415,13 +416,15 @@
          var imgPath = imgUrl + imgId + imgQuality;
          var downloadThumb = "url(" + '"' + imgPath + '"' + ")";
          imgPreview.style.backgroundImage = downloadThumb;
+         imgDownload.setAttribute("href", imgPath);
          prevDown.classList.remove("d-none");
+         
       }
       
-      imgDownload.addEventListener("click",()=>{
+      /*imgDownload.addEventListener("click",()=>{
          saveAs(imgPath,imgId);
          
-      })
+      })*/
      }
    }    
    
@@ -432,6 +435,8 @@
    }
    return false;
    }
+   
+   
 </script>
 </body>
 </html>
