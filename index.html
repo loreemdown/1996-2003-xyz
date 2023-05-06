@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- HTML Meta Tags -->
+    <title>Loreem - Youtube thumbnail Image View and Download</title>
+    <meta name="keywords" content="thumbnail download youtube,
+    youtube thumbnail download 4k,
+    youtube thumbnail free download,
+    youtube shorts thumbnail download,
+    youtube thumbnail template free download,
+    youtube thumbnail background 1280x720 download,
+    youtube thumbnail download no copyright,
+    youtube thumbnail maker download for pc,
+    youtube video thumbnail download 4k,
+    download youtube thumbnail full size,
+    thumbnail download youtube online,
+    download thumbnail youtube apk,
+    youtube thumbnail download app,
+    download thumbnail of a youtube video,
+    youtube thumbnail download mod apk,
+    download any youtube video thumbnail,
+    thumbnail maker for youtube apk download,
+    can you download youtube thumbnail,
+    how to download youtube thumbnail,
+    how to download thumbnail of any youtube video,
+    youtube thumbnail image view and download,
+    youtube thumbnail app download" >
+    <meta name="description" content="Download youtube thumbnail Images and vimeo videos of all quality. This app lets you to download HD thumbnail images for free. Just enter the URL of the video for which thumbnail needs to be saved.">
+    
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://loreem.co/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Youtube thumbnail Image View and Download">
+    <meta property="og:description" content="Download youtube thumbnail Images and vimeo videos of all quality. This app lets you to download HD thumbnail images for free. Just enter the URL of the video for which thumbnail needs to be saved.">
+    <meta property="og:image" content="https://www.dropbox.com/s/3yy1uocm0aymqvx/20230506_020303_0000.png?dl=1">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="loreem.co">
+    <meta property="twitter:url" content="https://loreem.co/">
+    <meta name="twitter:title" content="Youtube thumbnail Image View and Download">
+    <meta name="twitter:description" content="Download youtube thumbnail Images and vimeo videos of all quality. This app lets you to download HD thumbnail images for free. Just enter the URL of the video for which thumbnail needs to be saved.">
+    <meta name="twitter:image" content="https://www.dropbox.com/s/3yy1uocm0aymqvx/20230506_020303_0000.png?dl=1">
+    
+    
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=K2D:300,400,500,700,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <style type="text/css">
+    
+      .blob {
+      background: black;
+      border-radius: 50%;
+      margin: 8px;
+      height: 40px;
+      width: 40px;
+      
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+      transform: scale(1);
+      animation: pulse-red 2s infinite;
+      }
+      
+      
+      
+      
+      .blob.red {
+      background: rgba(255, 82, 82, 1);
+      box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+      animation: pulse-red 2s infinite;
+      }
+      
+      @keyframes pulse-red {
+      0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+      }
+      
+      70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+      }
+      
+      100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+      }
+      }
+      
+      .btn-blob {
+      background: black;
+      border-radius: 7px;
+      border-top-left-radius:0px;
+      border-bottom-left-radius:0px;
+      color:white;
+      align-items:center;
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+      transform: scale(1);
+      animation: pulse-red 2s infinite;
+      }
+      
+      
+      
+      
+      .btn-blob.btn-red {
+      background: rgba(255, 82, 82, 1);
+      box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+      animation: pulse-red 2s infinite;
+      }
+      
+      
+      .img-preview{
+         height:200px;
+         width:100%;
+         background:#efefef;
+         border-radius:6px;
+         background-image:url("");
+         background-size:cover;
+         background-repeat:no-repeat;
+         background-position:center;
+      }
+      
+    </style>
+</head>
+<body>
+
+<!--Header Section-->
+<section class="bg-gradient pt-2 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-row align-items-center justify-content-between">
+                <div class="heading-brand d-flex align-items-center justify-content-center text-white">Loreem</div>
+                <!--<a href="" class="text-white">Download Mp3</a>-->
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-8 mx-auto text-center">
+                <h3 class="text-white" >YOUTUBE THUMBNAIL DOWNLOADER</h3>
+                <p class="lead d-none mb-5">Download YouTube video thumbnails of any YouTube video.</p>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-9 mx-auto">
+                <div class="code-window">
+                    
+                    <div class="input-group d-flex mb-3">
+                    <input type="text" id="yt-input"   placeholder="https://youtu.be/1ek2KY" class="form-control form-control-lg">
+                    <div class="input-group-append">
+                    <button  class="btn btn-lg btn-blob btn-red" onclick="saveThumbnail()">
+                    <span data-feather="send" width="28" height="28"></span>
+                    </button></div>
+                    </div>
+                    
+                    
+                    <div class="p-2 d-none" id="prev-down">
+                        <div class="img-preview my-2" id="yt-thumb" >
+                        </div>
+                    
+                    
+                       <a class="w-100  btn-red btn-lg d-flex align-items-center justify-content-center" id="download-thumb" ><span class="me-3" >Download Thumbnail</span><span data-feather="download-cloud" width="28" height="28"></span></a>
+                    </div>
+                    
+                    <p>How to copy YouTube video url? <a href="#setup" class="text-danger" >Click here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Features Section-->
+<section class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto" id="setup" >
+                <h2 class="text-center text-md-left">HOW TO FIND A <span class="text-danger">YOUTUBE</span> VIDEO URL?</span></h2>
+                <div class="row feature-grid">
+                    <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="arrow-right-circle" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Open YouTube app.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="arrow-right-circle" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Search YouTube video.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="arrow-right-circle" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Tap on video.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="arrow-right-circle" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Tap on share.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="arrow-right-circle" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Tap on Copy Link.
+                            </div>
+                        </div>
+                    </div><div class="col-sm-6">
+                        <div class="media">
+                            <div class="icon-box">
+                                <div class="icon-box-inner">
+                                    <span data-feather="arrow-right-circle" width="28" height="28"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                Finaly paste link and click download thumbnail.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Used By Section-->
+<section class="pb-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2 class="text-center text-md-left">WHAT IS A YOUTUBE THUMBNAIL DOWNLOADER?</h2>
+                <p class="text-muted">
+                A YouTube Thumbnail Downloader is a useful free tool for finding and downloading thumbnail images from YouTube videos. Each YouTube video can have up to five different sizes of thumbnails, which can be set up in your YouTube account within the video settings.
+                </p>
+                <p class="text-muted">
+                To use a YouTube Thumbnail Downloader, you will need the YouTube video ID, which can be found in the URL of the video. Once you have the video ID, you can easily generate thumbnail URLs for the video by replacing "yt-video-id" in the URL with the actual ID.
+                </p>
+                <p class="text-muted">
+                You can then go to one of these URLs to download the YouTube thumbnail image in different sizes and qualities. A good YouTube Thumbnail Downloader will allow you to choose the resolution of the thumbnail you want to download.
+                </p>
+                <p class="text-muted">
+                It's important to note that while YouTube thumbnails are generally considered public domain images, it's still important to respect the copyright of the original creator. Make sure you have permission to use the thumbnail before you use it, and be mindful of YouTube's terms of service when using thumbnails in a way that implies endorsement by YouTube or the video's creator.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Modal Terms & Privacy-->
+<div class="modal fade" id="terms" tabindex="-1" aria-labelledby="termsModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="termsModal">Terms & Privacy</h5>
+      </div>
+      <div class="modal-body">
+        <p>
+        This agreement describes the conditions and rules under which <a href="https://loreem.co" class="text-danger" >loreem</a> ("our company", "we") offers you its services at <a href="https://loreem.co" class="text-danger" >loreem.co</a>.
+        
+        This agreement will be governed by the laws of The Republic of Latvia, without reference to conflict of laws principles. You agree that any litigation relating to this agreement may only be brought in, and shall be subject to the jurisdiction of, any Court of The Republic of Latvia.
+        
+        <h3>Terms</h3>
+        By using the services of <a href="https://loreem.co" class="text-danger" >loreem.co</a>, you agree to observe all of the following conditions and rules:
+        <ul>
+        <li>
+        1. Use of the <a href="https://loreem.co" class="text-danger" >loreem.co</a> service is at your own risk.
+        </li>
+        <li>
+        2. You bear full responsibility for any data transmitted to <a href="https://loreem.co" class="text-danger" >loreem.co</a> servers.
+        </li>
+        <li>
+        3. You agree not to use the <a href="https://loreem.co" class="text-danger" >loreem.co</a> service to upload any illegal materials.
+        </li>
+        <li>
+        4. You agree not to integrate the <a href="https://loreem.co" class="text-danger" >loreem.co</a> service into your own or 3rd party applications.
+        </li>
+        <li>
+        5. You may use the <a href="https://loreem.co" class="text-danger" >loreem.co</a> service for any purpose, personal or commercial.
+        </li>
+        <li>
+        6. We reserves the right to change or cease any of services at <a href="https://loreem.co" class="text-danger" >loreem.co</a>, at any time.
+        </li>
+        <li>
+        7. We reserves the right to change the terms of this agreement without notice.
+        </li>
+        <li>
+        8. The <a href="https://loreem.co" class="text-danger" >loreem.co</a> service does not provide any guarantees.
+        </li>
+        <h3>Privacy</h3>
+        <li>
+        9. Submitted data and the generated files are kept only for a maximum of 1 hour and then permanently deleted.
+        </li>
+        <li>
+        10. Submitted data and the generated files will not be shared or accessed by our company, except if it is requested by law enforcement authorities.
+        </li>
+        <li>
+        11. In order to improve the quality of the <a href="https://loreem.co" class="text-danger" >loreem.co service</a>, we may save and analyze the metadata of your requests.
+        </li>
+        <li>
+        12. Google collects data and uses cookies for ad personalization and measurement for this site. <a href="https://policies.google.com/technologies/partner-sites" class="text-danger"  >Learn how Google collects and uses data</a>. You can turn off ad personalization at any time in your Google account settings. Also, we use cookies for statistical purposes. By using this site, you consent to our use of cookies.
+        </li>
+        </ul>
+        </p>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ads-->
+<div class="modal fade" id="ads" tabindex="-1" aria-labelledby="adsModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="adsModal">Advertise With Us</h5>
+      </div>
+      <div class="modal-body">
+        <p>You can Advertise with us by Putting a banner (Image, Gif or Video) at any place that you want.we will hyperlink that banner to your channel or video and we will remove any other ad for that duration. We will put your ad between 12 pm to 4 pm till the next 24 hours.
+        We charge on a daily basis if you want to advertise more than one day then mention in mail, we will negotiate on a discounted price.</p>
+        
+        <h5>We charge 5$ per day.</h5>
+        
+        <p><b>Note</b> : Any customization is available related to advertisement according to your need.
+        For any query or suggestion. Leave a mail-back to us!
+        </p>
+        Thank You,
+        Stay Connected with us!
+        infoloreem@gmail.com
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Contact-->
+<div class="modal fade" id="contact" tabindex="-1" aria-labelledby="contactModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="contactModal">Contact Us</h5>
+      </div>
+      <div class="modal-body">
+        Thank You,
+        Stay Connected with us!
+        infoloreem@gmail.com
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--footer-->
+<footer class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="" data-toggle="modal" data-target="#contact">Contact</a></li>
+                    <li class="list-inline-item"><a href="" data-toggle="modal" data-target="#ads">Advertise</a></li>
+                    <li class="list-inline-item"><a href="" data-toggle="modal" data-target="#terms">Terms & Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-md-4 mx-auto text-muted text-center small-xl">
+                &copy; 2023 Loreem - All Rights Reserved
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" crossorigin="anonymous"></script>
+        
+<script src="scripts.js"></script>
+<script type="text/javascript">
+   function saveThumbnail(){
+      var ytInput = document.getElementById('yt-input').value;
+      var splitURL = ytInput.toString().split("/");
+      var imgPreview = document.querySelector('#yt-thumb');
+      var imgDownload = document.querySelector('#download-thumb');
+      var prevDown = document.querySelector('#prev-down');
+      if(ytInput.length == ""){
+        prevDown.classList.add("d-none");
+      Toastify({
+      text: "Enter url please",
+      style: {
+      background: "#df4759",
+      }
+      }).showToast();
+      }else if(!matchYoutubeUrl(ytInput)){
+      Toastify({
+      text: "Youtube url format not valid",
+      style: {
+      background: "#df4759",
+      }
+      }).showToast();
+      }else{
+      if(splitURL[2] == "www.youtube.com"){
+         var splitURL1 = ytInput.toString().split("watch?v=");
+         var imgUrl = "https://img.youtube.com/vi/";
+         var imgId = splitURL1[1];
+         var imgQuality ="/maxresdefault.jpg";
+         var imgPath = imgUrl + imgId + imgQuality;
+         var downloadThumb = "url(" + '"' + imgPath + '"' + ")";
+         imgPreview.style.backgroundImage = downloadThumb;
+         imgDownload.setAttribute("href", imgPath);
+         prevDown.classList.remove("d-none");
+      }else if(splitURL[2] == "youtu.be"){
+         var imgUrl = "https://img.youtube.com/vi/";
+         var imgId = splitURL[3];
+         var imgQuality ="/maxresdefault.jpg";
+         var imgPath = imgUrl + imgId + imgQuality;
+         var downloadThumb = "url(" + '"' + imgPath + '"' + ")";
+         imgPreview.style.backgroundImage = downloadThumb;
+         imgDownload.setAttribute("href", imgPath);
+         prevDown.classList.remove("d-none");
+         
+      }
+      
+      /*imgDownload.addEventListener("click",()=>{
+         saveAs(imgPath,imgId);
+         
+      })*/
+     }
+   }    
+   
+   function matchYoutubeUrl(url) {
+   var p = /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+   if(url.match(p)){
+   return url.match(p)[1];
+   }
+   return false;
+   }
+   
+   
+</script>
+</body>
+</html>
