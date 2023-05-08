@@ -60,8 +60,7 @@
     <meta name="twitter:title" content="Youtube thumbnail Image View and Download">
     <meta name="twitter:description" content="Download youtube thumbnail Images and vimeo videos of all quality. This app lets you to download HD thumbnail images for free. Just enter the URL of the video for which thumbnail needs to be saved.">
     <meta name="twitter:image" content="https://www.dropbox.com/s/3yy1uocm0aymqvx/20230506_020303_0000.png?dl=1">
-    <meta name="robots" content="index, archive"/>
-<link rel="canonical" href="https://youtube-thumbnails-grabber.com/"/>
+    
     
     <!--Google font-->
     <link href="https://fonts.googleapis.com/css?family=K2D:300,400,500,700,800" rel="stylesheet">
@@ -143,15 +142,6 @@
       }
       
     </style>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4F677ZPMPH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4F677ZPMPH');
-</script>
 </head>
 <body>
 
@@ -186,9 +176,16 @@
                     <div class="p-2 d-none" id="prev-down">
                         <div class="img-preview my-2" id="yt-thumb" >
                         </div>
-                    
-                    
-                       <a class="w-100  btn-red btn-lg d-flex align-items-center justify-content-center" id="download-thumb" ><span class="me-3" >Download Thumbnail</span><span data-feather="download-cloud" width="28" height="28"></span></a>
+                        <a class="w-100  btn-red btn-lg d-flex align-items-center justify-content-center" id="download-thumb" ><span class="me-3" >Download Thumbnail (1280x720)</span><span data-feather="download-cloud" width="28" height="28"></span></a>
+                        <div class="img-preview my-2" id="yt-thumb2" >
+                        </div>
+                        <a class="w-100  btn-red btn-lg d-flex align-items-center justify-content-center" id="download-thumb2" ><span class="me-3" >Download Thumbnail (640x480)</span><span data-feather="download-cloud" width="28" height="28"></span></a>
+                        <div class="img-preview my-2" id="yt-thumb3" >
+                        </div>
+                        <a class="w-100  btn-red btn-lg d-flex align-items-center justify-content-center" id="download-thumb3" ><span class="me-3" >Download Thumbnail (480x360)</span><span data-feather="download-cloud" width="28" height="28"></span></a>
+                        <div class="img-preview my-2" id="yt-thumb4" >
+                        </div>
+                        <a class="w-100  btn-red btn-lg d-flex align-items-center justify-content-center" id="download-thumb4" ><span class="me-3" >Download Thumbnail (320x180)</span><span data-feather="download-cloud" width="28" height="28"></span></a>
                     </div>
                     
                     <p>How to copy YouTube video url? <a href="#setup" class="text-danger" >Click here</a></p>
@@ -488,7 +485,13 @@
       var ytInput = document.getElementById('yt-input').value;
       var splitURL = ytInput.toString().split("/");
       var imgPreview = document.querySelector('#yt-thumb');
+      var imgPreview2 = document.querySelector('#yt-thumb2');
+      var imgPreview3 = document.querySelector('#yt-thumb3');
+      var imgPreview4 = document.querySelector('#yt-thumb4');
       var imgDownload = document.querySelector('#download-thumb');
+      var imgDownload2 = document.querySelector('#download-thumb2');
+      var imgDownload3 = document.querySelector('#download-thumb3');
+      var imgDownload4 = document.querySelector('#download-thumb4');
       var prevDown = document.querySelector('#prev-down');
       if(ytInput.length == ""){
         prevDown.classList.add("d-none");
@@ -510,20 +513,50 @@
          var splitURL1 = ytInput.toString().split("watch?v=");
          var imgUrl = "https://img.youtube.com/vi/";
          var imgId = splitURL1[1];
-         var imgQuality ="/maxresdefault.jpg";
-         var imgPath = imgUrl + imgId + imgQuality;
-         var downloadThumb = "url(" + '"' + imgPath + '"' + ")";
-         imgPreview.style.backgroundImage = downloadThumb;
-         imgDownload.setAttribute("href", imgPath);
-         prevDown.classList.remove("d-none");
+        var imgQuality ="/maxresdefault.jpg";
+        var imgQuality2 ="/sddefault.jpg";
+        var imgQuality3 ="/hqdefault.jpg";
+        var imgQuality4 ="/mqdefault.jpg";
+        var imgPath = imgUrl + imgId + imgQuality;
+        var imgPath2 = imgUrl + imgId + imgQuality2;
+        var imgPath3 = imgUrl + imgId + imgQuality3;
+        var imgPath4 = imgUrl + imgId + imgQuality4;
+        var downloadThumb = "url(" + '"' + imgPath + '"' + ")";
+        var downloadThumb2 = "url(" + '"' + imgPath2 + '"' + ")";
+        var downloadThumb3 = "url(" + '"' + imgPath3 + '"' + ")";
+        var downloadThumb4 = "url(" + '"' + imgPath4 + '"' + ")";
+        imgPreview.style.backgroundImage = downloadThumb;
+        imgPreview2.style.backgroundImage = downloadThumb2;
+        imgPreview3.style.backgroundImage = downloadThumb3;
+        imgPreview4.style.backgroundImage = downloadThumb4;
+        imgDownload.setAttribute("href", imgPath);
+        imgDownload2.setAttribute("href", imgPath2);
+        imgDownload3.setAttribute("href", imgPath3);
+        imgDownload4.setAttribute("href", imgPath4);
+        prevDown.classList.remove("d-none");
       }else if(splitURL[2] == "youtu.be"){
          var imgUrl = "https://img.youtube.com/vi/";
          var imgId = splitURL[3];
          var imgQuality ="/maxresdefault.jpg";
+         var imgQuality2 ="/sddefault.jpg";
+         var imgQuality3 ="/hqdefault.jpg";
+         var imgQuality4 ="/mqdefault.jpg";
          var imgPath = imgUrl + imgId + imgQuality;
+         var imgPath2 = imgUrl + imgId + imgQuality2;
+         var imgPath3 = imgUrl + imgId + imgQuality3;
+         var imgPath4 = imgUrl + imgId + imgQuality4;
          var downloadThumb = "url(" + '"' + imgPath + '"' + ")";
+         var downloadThumb2 = "url(" + '"' + imgPath2 + '"' + ")";
+         var downloadThumb3 = "url(" + '"' + imgPath3 + '"' + ")";
+         var downloadThumb4 = "url(" + '"' + imgPath4 + '"' + ")";
          imgPreview.style.backgroundImage = downloadThumb;
+         imgPreview2.style.backgroundImage = downloadThumb2;
+         imgPreview3.style.backgroundImage = downloadThumb3;
+         imgPreview4.style.backgroundImage = downloadThumb4;
          imgDownload.setAttribute("href", imgPath);
+         imgDownload2.setAttribute("href", imgPath2);
+         imgDownload3.setAttribute("href", imgPath3);
+         imgDownload4.setAttribute("href", imgPath4);
          prevDown.classList.remove("d-none");
          
       }
