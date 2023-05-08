@@ -1,7 +1,7 @@
 User-agent: Googlebot
-Disallow: /nogooglebot/
-
+Disallow: /clients/
+Disallow: /not-for-google
 User-agent: *
-Allow: /
-
-Sitemap: https://www.loreem.co/sitemap.xml
+Disallow: /archive/
+Disallow: /support/
+Sitemap: https://youtube-thumbnails-grabber.com/sitemap.xml
